@@ -35,9 +35,9 @@ jobs:
     - name: Build and tag Docker image
       run: |
         docker build -t my-express-app:latest .
-        docker tag my-express-app:latest ${{ secrets.DOCKER_USERNAME }}/my-express-app:latest
+        docker tag my-express-app:latest ${{ secrets.DOCKER_USERNAME }}/testing:latest
 
     # Step 6: Push the Docker image to Docker Hub
     - name: Push Docker image to Docker Hub
       run: |
-        docker push ${{ secrets.DOCKER_USERNAME }}/my-express-app:latest
+        docker push ${{ secrets.DOCKER_USERNAME }}/testing:latest
